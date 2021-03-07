@@ -18,6 +18,7 @@ List<int> bubbleSort(List<int> list) {
   }
   return list;
 }
+
 void main() {
   print('Bubble sort: Enter numbers separated by commas:\n');
   List<String> chars = stdin.readLineSync().toString().split(","); 
