@@ -1,21 +1,21 @@
 import 'dart:io';
 
-List<int> bubbleSort(unsorted) {
+List<int> bubbleSort(List<int> unsorted) {
   List<int> sorted = [...unsorted];
-  int unsortedEnd = sorted.length-1;
+  int end = sorted.length-1;
   bool swapped = true;
 
   while (swapped) {
     swapped = false;
-    for(var i = 0; i < unsortedEnd; i++) {
+    for(var i = 0; i < end; i++) {
       if (sorted[i] > sorted[i+1]) {
-        var temp = sorted[i];
+        int temp = sorted[i];
         sorted[i] = sorted[i+1];
         sorted[i+1] = temp;
         swapped = true;
       }
     }
-    unsortedEnd--;
+    end--;
   }
   return sorted;
 }
