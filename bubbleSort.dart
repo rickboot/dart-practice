@@ -6,7 +6,7 @@ List<int> bubbleSort(List<int> list) {
 
   while (unsorted) {
     unsorted = false;
-    for(var i = 0; i < end; i++) {
+    for(int i = 0; i < end; i++) {
       if (list[i] > list[i+1]) {
         int temp = list[i];
         list[i] = list[i+1];
