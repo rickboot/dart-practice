@@ -14,8 +14,6 @@ List<num> insertionSort(List<num> list) {
       curr--;
     }
   }
-
-
   return list;
 }
 
