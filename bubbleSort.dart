@@ -1,6 +1,6 @@
 import 'dart:io';
 
-List<int> bubbleSort(List<int> list) {
+List<num> bubbleSort(List<num> list) {
   int end = list.length-1;
   bool unsorted = true;
 
@@ -8,7 +8,7 @@ List<int> bubbleSort(List<int> list) {
     unsorted = false;
     for(int i = 0; i < end; i++) {
       if (list[i] > list[i+1]) {
-        int temp = list[i];
+        num temp = list[i];
         list[i] = list[i+1];
         list[i+1] = temp;
         unsorted = true;
@@ -20,9 +20,9 @@ List<int> bubbleSort(List<int> list) {
 }
 
 void main() {
-  print('Bubble sort: Enter numbers separated by commas:\n');
+  print('\nBubble sort: Enter numbers separated by commas:\n');
   List<String> chars = stdin.readLineSync().toString().split(","); 
-  List<int> unlist = chars.map((char) => int.parse(char)).toList();
+  List<num> unlist = chars.map((char) => num.parse(char)).toList();
   print( bubbleSort(unlist) );
 }
 
